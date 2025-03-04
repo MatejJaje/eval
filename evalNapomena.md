@@ -1,1 +1,0 @@
-za SPIRALA se unose odgovori iz 2022. buduci da se u jos jednoj godini ima spirala
