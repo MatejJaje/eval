@@ -1,5 +1,6 @@
 import sys
 import subprocess,time
+import platform
 if len(sys.argv)!=4:
     sys.exit("usage: python eval.py <testFilePath> <testCasesPath> <timeLimit>")
     
@@ -7,13 +8,34 @@ filePath = sys.argv[1]
 testPath = sys.argv[2]
 timeLimit = float(sys.argv[3])
 
+if platform.system()=="Windows":
+    compiler = "powershell /msys64/ucrt64/bin/g++.exe"
+    compilerOutput = "./out.exe" 
+    shell = "powershell"
+elif platform.system()=="Linux":
+    compiler = "/bin/bash g++"
+    compilerOutput = "./out"
+    shell = "/bin/bash"
+else:
+    sys.exit("OS not supported")
+
 sufix = filePath.split(sep=".")[-1]
 if sufix == "py":
-    fileExecution = "python " + filePath
+    if platform.system()=="Windows":
+        coderunner = f"powershell python {filePath}"
+    elif platform.system()=="Linux":
+        coderunner = f"/bin/bash python {filePath}"
+    else:
+        sys.exit("OS not supported")
 
 elif sufix =="c" or sufix =="cpp":
-    print(subprocess.getoutput(f"g++ {filePath} -o temp"))
-    fileExecution = "./temp"
+    print(subprocess.getoutput(f"{compiler} {filePath} -o {compilerOutput}"))
+    if platform.system()=="Windows":
+        coderunner = "powershell ./out.exe"
+    elif platform.system()=="Linux":
+        coderunner = "/bin/bash ./out.exe"
+    else:
+        sys.exit("OS not supported")
 
 else:
     sys.exit(f"Error: file type {sufix} not supported")
@@ -77,7 +99,7 @@ for case in testCases:
 
     start = time.perf_counter()
 
-    result = subprocess.getoutput(f"cat {case.inPath}|{fileExecution}")
+    result = subprocess.getoutput(f"{shell} cat {case.inPath}|{coderunner}")
 
     end = time.perf_counter()
 
@@ -100,3 +122,19 @@ for case in testCases:
 
     print(case.type,case.name, "\tExecution time:", round(case.time,3))
 
+
+instruction = input("> ")
+while instruction!="q":
+    found = False
+    for case in testCases:
+        if case.name==instruction:
+            found = True
+            break
+    if found: 
+        print(f"....Input ....\n{open(case.inPath,"r").read()}")
+        print(f"\n....User Result ....\n{case.result}\n")
+        print(f"....Solution ....\n{open(case.outPath,"r").read()}")
+    else:
+        print("testCase not found")
+    
+    instruction = input("> ")
