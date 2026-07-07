@@ -13,9 +13,9 @@ if platform.system()=="Windows":
     compilerOutput = "./out.exe" 
     shell = "powershell"
 elif platform.system()=="Linux":
-    compiler = "/bin/bash g++"
+    compiler = "g++"
     compilerOutput = "./out"
-    shell = "/bin/bash"
+    shell = ""
 else:
     sys.exit("OS not supported")
 
@@ -33,7 +33,7 @@ elif sufix =="c" or sufix =="cpp":
     if platform.system()=="Windows":
         coderunner = "powershell ./out.exe"
     elif platform.system()=="Linux":
-        coderunner = "/bin/bash ./out.exe"
+        coderunner = "./out"
     else:
         sys.exit("OS not supported")
 
