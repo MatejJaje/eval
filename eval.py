@@ -1,12 +1,33 @@
 import sys
 import subprocess,time
 import platform
-if len(sys.argv)!=4:
-    sys.exit("usage: python eval.py <testFilePath> <testCasesPath> <timeLimit>")
+import os
+
+
+if sys.argv[1]=="manual":
+    if len(sys.argv)!=5:
+        sys.exit("usage: python eval.py manual <testFilePath> <testCasesPath> <timeLimit>\n or \n python eval.py <testName>")
+    filePath = sys.argv[2]
+    testPath = sys.argv[3]
+    timeLimit = float(sys.argv[4])
+else:
+    if len(sys.argv)!=3:
+        sys.exit("usage: python eval.py manual <testFilePath> <testCasesPath> <timeLimit>\n or \n python eval.py <testFile> <timeLimit>")
+    filePath = f"./{sys.argv[1]}"
+    testName = sys.argv[1].split(".")[0]
+    testPath = None
+    evalDir = subprocess.getoutput("echo $eval")
+    for d1 in os.listdir(evalDir):
+        if os.path.isfile(f"{evalDir}/{d1}"): continue
+        for d2 in os.listdir(f"{evalDir}/{d1}"):
+            if os.path.isfile(f"{evalDir}/{d1}/{d2}"): continue
+            if testName in os.listdir(f"{evalDir}/{d1}/{d2}"):
+                testPath = f"{evalDir}/{d1}/{d2}/{testName}"
+                break
+    if testPath == None: 
+        sys.exit(f"Test cases not found for {testName}")
+    timeLimit = float(sys.argv[2])
     
-filePath = sys.argv[1]
-testPath = sys.argv[2]
-timeLimit = float(sys.argv[3])
 
 if platform.system()=="Windows":
     compiler = "powershell /msys64/ucrt64/bin/g++.exe"
@@ -50,11 +71,11 @@ class testCase:
     time = None
     correct = None
 
-from os import listdir
+
 
 testCases=[]
 names = set()
-for file in listdir(testPath):
+for file in os.listdir(testPath):
     file = file.split(sep=".")
 
     if len(file)==4:
