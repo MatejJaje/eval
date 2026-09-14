@@ -1,0 +1,661 @@
+660
+begin
+begin
+var x = 40
+var y = 32
+var z = 63
+begin
+begin
+var x = 123
+var y = 43
+var z = 13
+end
+begin
+var x = 4
+var y = 3
+var z = 6
+write x
+write z
+write y
+end
+begin
+write x
+write y
+write z
+end
+end
+write x
+write y
+write z
+end
+begin
+var x = 1
+var y = 100
+var r = 324
+write x
+write y
+var x = 40
+var y = 32
+begin
+begin
+var x = 123
+var y = 43
+end
+begin
+var x = 4
+write r
+var y = 3
+begin
+write r
+var r = 33
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 50
+var y = 42
+begin
+begin
+var x = 133
+var y = 53
+end
+begin
+var x = 14
+write r
+var y = 13
+begin
+write r
+var r = 43
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 60
+var y = 52
+begin
+begin
+var x = 143
+var y = 63
+end
+begin
+var x = 24
+write r
+var y = 23
+begin
+write r
+var r = 53
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 70
+var y = 62
+begin
+begin
+var x = 153
+var y = 73
+end
+begin
+var x = 34
+write r
+var y = 33
+begin
+write r
+var r = 63
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 80
+var y = 72
+begin
+begin
+var x = 163
+var y = 83
+end
+begin
+var x = 44
+write r
+var y = 43
+begin
+write r
+var r = 73
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 90
+var y = 82
+begin
+begin
+var x = 173
+var y = 93
+end
+begin
+var x = 54
+write r
+var y = 53
+begin
+write r
+var r = 83
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 100
+var y = 92
+begin
+begin
+var x = 183
+var y = 103
+end
+begin
+var x = 64
+write r
+var y = 63
+begin
+write r
+var r = 93
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 110
+var y = 102
+begin
+begin
+var x = 193
+var y = 113
+end
+begin
+var x = 74
+write r
+var y = 73
+begin
+write r
+var r = 103
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 120
+var y = 112
+begin
+begin
+var x = 203
+var y = 123
+end
+begin
+var x = 84
+write r
+var y = 83
+begin
+write r
+var r = 113
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 130
+var y = 122
+begin
+begin
+var x = 213
+var y = 133
+end
+begin
+var x = 94
+write r
+var y = 93
+begin
+write r
+var r = 123
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 140
+var y = 132
+begin
+begin
+var x = 223
+var y = 143
+end
+begin
+var x = 104
+write r
+var y = 103
+begin
+write r
+var r = 133
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 150
+var y = 142
+begin
+begin
+var x = 233
+var y = 153
+end
+begin
+var x = 114
+write r
+var y = 113
+begin
+write r
+var r = 143
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 160
+var y = 152
+begin
+begin
+var x = 243
+var y = 163
+end
+begin
+var x = 124
+write r
+var y = 123
+begin
+write r
+var r = 153
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 170
+var y = 162
+begin
+begin
+var x = 253
+var y = 173
+end
+begin
+var x = 134
+write r
+var y = 133
+begin
+write r
+var r = 163
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 180
+var y = 172
+begin
+begin
+var x = 263
+var y = 183
+end
+begin
+var x = 144
+write r
+var y = 143
+begin
+write r
+var r = 173
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 190
+var y = 182
+begin
+begin
+var x = 273
+var y = 193
+end
+begin
+var x = 154
+write r
+var y = 153
+begin
+write r
+var r = 183
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 200
+var y = 192
+begin
+begin
+var x = 283
+var y = 203
+end
+begin
+var x = 164
+write r
+var y = 163
+begin
+write r
+var r = 193
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 210
+var y = 202
+begin
+begin
+var x = 293
+var y = 213
+end
+begin
+var x = 174
+write r
+var y = 173
+begin
+write r
+var r = 203
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 220
+var y = 212
+begin
+begin
+var x = 303
+var y = 223
+end
+begin
+var x = 184
+write r
+var y = 183
+begin
+write r
+var r = 213
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+write x
+write y
+var x = 230
+var y = 222
+begin
+begin
+var x = 313
+var y = 233
+end
+begin
+var x = 194
+write r
+var y = 193
+begin
+write r
+var r = 223
+write r
+end
+write r
+write x
+write y
+end
+begin
+write x
+write y
+end
+end
+write x
+write y
+end
+begin
+var a = 4
+var b = 3
+var c = 6
+begin
+write c
+write b
+write a
+begin
+var a = 14
+var b = 13
+var c = 16
+end
+write a
+write b
+end
+end
+begin
+var x = 40
+var y = 32
+var z = 63
+begin
+begin
+var x = 123
+var y = 43
+var z = 13
+end
+begin
+var x = 4
+var y = 3
+var z = 6
+write x
+write z
+write y
+end
+begin
+write x
+write y
+write z
+end
+end
+write x
+write y
+write z
+end
+end

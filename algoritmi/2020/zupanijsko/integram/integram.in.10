@@ -1,0 +1,102 @@
+5 4
+grad zadar rijeka osijek pula
+predmet gumica stol bicikl auto
+boja zelena bijela plava ljubicasta
+mjesec prosinac studeni rujan ozujak
+prezime ivic petko novak greda
+14
+gumica je osijek
+osijek nije petko
+stol nije plava
+studeni nije novak
+auto je greda
+greda je bijela
+pula nije plava
+pula nije greda
+stol nije studeni
+gumica nije prosinac
+ivic nije ljubicasta
+rujan je plava
+zadar je ivic
+pula nije ljubicasta
+80
+zadar predmet
+rijeka predmet
+osijek predmet
+pula predmet
+zadar boja
+rijeka boja
+osijek boja
+pula boja
+zadar mjesec
+rijeka mjesec
+osijek mjesec
+pula mjesec
+zadar prezime
+rijeka prezime
+osijek prezime
+pula prezime
+gumica grad
+stol grad
+bicikl grad
+auto grad
+gumica boja
+stol boja
+bicikl boja
+auto boja
+gumica mjesec
+stol mjesec
+bicikl mjesec
+auto mjesec
+gumica prezime
+stol prezime
+bicikl prezime
+auto prezime
+zelena grad
+bijela grad
+plava grad
+ljubicasta grad
+zelena predmet
+bijela predmet
+plava predmet
+ljubicasta predmet
+zelena mjesec
+bijela mjesec
+plava mjesec
+ljubicasta mjesec
+zelena prezime
+bijela prezime
+plava prezime
+ljubicasta prezime
+prosinac grad
+studeni grad
+rujan grad
+ozujak grad
+prosinac predmet
+studeni predmet
+rujan predmet
+ozujak predmet
+prosinac boja
+studeni boja
+rujan boja
+ozujak boja
+prosinac prezime
+studeni prezime
+rujan prezime
+ozujak prezime
+ivic grad
+petko grad
+novak grad
+greda grad
+ivic predmet
+petko predmet
+novak predmet
+greda predmet
+ivic boja
+petko boja
+novak boja
+greda boja
+ivic mjesec
+petko mjesec
+novak mjesec
+greda mjesec
