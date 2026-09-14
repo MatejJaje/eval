@@ -21,9 +21,11 @@ else:
         if os.path.isfile(f"{evalDir}/{d1}"): continue
         for d2 in os.listdir(f"{evalDir}/{d1}"):
             if os.path.isfile(f"{evalDir}/{d1}/{d2}"): continue
-            if testName in os.listdir(f"{evalDir}/{d1}/{d2}"):
-                testPath = f"{evalDir}/{d1}/{d2}/{testName}"
-                break
+            for d3 in os.listdir(f"{evalDir}/{d1}/{d2}"):
+                if os.path.isfile(f"{evalDir}/{d1}/{d2}/{d3}"): continue
+                if testName in os.listdir(f"{evalDir}/{d1}/{d2}/{d3}"):
+                    testPath = f"{evalDir}/{d1}/{d2}/{d3}/{testName}"
+                    break
     if testPath == None: 
         sys.exit(f"Test cases not found for {testName}")
     timeLimit = float(sys.argv[2])
@@ -50,7 +52,20 @@ if sufix == "py":
         sys.exit("OS not supported")
 
 elif sufix =="c" or sufix =="cpp":
-    print(subprocess.getoutput(f"{compiler} {filePath} -o {compilerOutput}"))
+    result = subprocess.run(
+        f"{compiler} {filePath} -o {compilerOutput}",
+        shell=True,
+        capture_output=True,
+        text=True
+    )
+
+    print(result.stdout)
+    print(result.stderr)
+
+    if result.returncode != 0:
+        print("Compilation failed.")
+        sys.exit(1)
+    
     if platform.system()=="Windows":
         coderunner = "powershell ./out.exe"
     elif platform.system()=="Linux":
